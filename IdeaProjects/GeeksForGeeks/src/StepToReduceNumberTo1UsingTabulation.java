@@ -13,7 +13,7 @@ public class StepToReduceNumberTo1UsingTabulation {
         if(n<1)
             return -1;
         int[] ans = new int[n + 1];
-        int x=-1 , y=-1, z;
+        int x, y, z;
         ans[0] = 0;
         ans[1] = 0;
         ans[2] = 1;

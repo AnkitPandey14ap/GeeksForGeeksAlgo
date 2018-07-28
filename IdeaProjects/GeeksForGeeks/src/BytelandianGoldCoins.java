@@ -53,13 +53,13 @@ public class BytelandianGoldCoins {
             return 0;
         if (n == 1)
             return 1;
-        if(map.containsKey(n)){
-           return map.get(n);
-        }else {
-            int t=maxAmericanDollars1(n/2)+maxAmericanDollars1(n/3)+maxAmericanDollars1(n/4);
+        if (map.containsKey(n)) {
+            return map.get(n);
+        } else {
+            int t = maxAmericanDollars1(n / 2) + maxAmericanDollars1(n / 3) + maxAmericanDollars1(n / 4);
             if (t < n)
                 t = n;
-            map.put(n,t);
+            map.put(n, t);
         }
         return map.get(n);
     }
