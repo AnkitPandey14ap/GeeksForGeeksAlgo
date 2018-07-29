@@ -30,7 +30,7 @@ public class LinkedList {
         temp.next = newNode;
     }
 
-    public void pushAfterGiveNode(Node prevNode, int newData) {
+    public void pushAfterGivenNode(Node prevNode, int newData) {
         if (prevNode == null) {
             System.out.println("Previous node can't be null");
             return;
@@ -47,6 +47,29 @@ public class LinkedList {
             System.out.println(temp.data);
             temp = temp.next;
         }
+    }
+
+    void displayAllNodes(Node head) {
+        System.out.println("\nCreated Linked list is: ");
+        Node temp = head;
+        while (temp != null) {
+            System.out.println(temp.data);
+            temp = temp.next;
+        }
+    }
+
+
+    void reversLinkedList() {
+        Node prev = null;
+        Node current = head;
+        Node next;
+        while (current != null) {
+            next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+        }
+        head = prev;
     }
 
     public static void main(String[] args) {
@@ -70,9 +93,11 @@ public class LinkedList {
 
         // Insert 8, after 7. So linked list becomes
         // 1->7->8->6->4->NUllist
-        llist.pushAfterGiveNode(llist.head.next, 8);
-
+        llist.pushAfterGivenNode(llist.head.next, 8);
         llist.displayAllNodes();
+        llist.reversLinkedList();
+        llist.displayAllNodes();
+
     }
-    
+
 }

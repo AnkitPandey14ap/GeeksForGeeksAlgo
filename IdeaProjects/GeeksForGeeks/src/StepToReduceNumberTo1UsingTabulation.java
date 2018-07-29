@@ -19,7 +19,7 @@ public class StepToReduceNumberTo1UsingTabulation {
         ans[2] = 1;
         ans[3] = 1;
 
-        for (int i = 4; i <= n; i++) {
+        for (int i = 4; i <= n; i++){
 
             if (i % 3 == 0) {
                 y = ans[i / 3];
